@@ -1,3 +1,14 @@
+<button>Immagini</button>
+
+<ul class="persone">
+<li *ngFor="let loc of localita">
+  <button type="button" (click)="onSelect(loc)">
+    <span class="badge">{{ loc.paese }}</span>
+    <span class="badge">{{ loc.stato }}</span>
+  </button>
+</li>
+</ul>
+
 <table>
   <tr>
     <th>Paese</th>
@@ -6,17 +17,17 @@
   </tr>
   <tr>
     <td>Riva del Garda</td>
-    <td></td>
-    <td></td>
+    <td>Italia</td>
+    <td>{{ loc.immagine }}</td>
   </tr>
   <tr>
     <td>Halifax</td>
-    <td></td>
+    <td>Canada</td>
     <td></td>
   </tr>
   <tr>
     <td>Berlino</td>
-    <td></td>
+    <td>Germania</td>
     <td></td>
   </tr>
 </table>

@@ -9,4 +9,9 @@ import { ZONE } from './listalocalita.component';
 })
 export class LocalitaComponent {
   localita = ZONE;
+  localitaSelezionata?: Localita;
+
+  onSelect(loc: Localita) {
+    this.localitaSelezionata = loc;
+  }
 }
