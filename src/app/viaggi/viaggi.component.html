@@ -1,8 +1,8 @@
-<!--<button (click)="mostraNascondiImg()">
+<button (click)="mostraNascondiImg()">
   {{ mostraImmagine ? 'nascondi ' : 'mostra ' }} immagini
 </button>
-<br /> 
--->
+
+<br />
 
 <table>
   <thead>
@@ -11,10 +11,12 @@
     <th>Immagine</th>
   </thead>
   <tbody>
-    <tr *ngFor= "let loc of localita">
+    <tr *ngFor="let loc of localita">
       <td>{{ loc.paese }}</td>
-      <td>{{ loc.stato}}</td>
-      <td *ngIf="localitaSelezionata"></td>
+      <td>{{ loc.stato }}</td>
+      <td *ngIf="localitaSelezionata">
+        <img *nfIf="mostraImmagine" [src]="loc.immagine" width="200px" />
+      </td>
     </tr>
   </tbody>
 </table>
