@@ -15,3 +15,7 @@ export class LocalitaComponent {
     this.localitaSelezionata = loc;
   }
 }
+
+/**mostraNascondiImg() void {
+  this.mostraImmagine = !this.mostraImmagine;
+}*/

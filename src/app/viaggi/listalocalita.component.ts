@@ -20,3 +20,4 @@ export const ZONE: Localita[] = [
       'https://i0.wp.com/hierdadort.de/wp-content/uploads/2020/03/mural-oranienstra%C3%9Fe-berlin.jpg?resize=1024%2C851&ssl=1',
   },
 ];
+

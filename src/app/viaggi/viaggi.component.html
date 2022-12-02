@@ -1,33 +1,20 @@
-<button>Immagini</button>
-
-<ul class="persone">
-<li *ngFor="let loc of localita">
-  <button type="button" (click)="onSelect(loc)">
-    <span class="badge">{{ loc.paese }}</span>
-    <span class="badge">{{ loc.stato }}</span>
-  </button>
-</li>
-</ul>
+<!--<button (click)="mostraNascondiImg()">
+  {{ mostraImmagine ? 'nascondi ' : 'mostra ' }} immagini
+</button>
+<br /> 
+-->
 
 <table>
-  <tr>
+  <thead>
     <th>Paese</th>
     <th>Nazione</th>
-    <th></th>
-  </tr>
-  <tr>
-    <td>Riva del Garda</td>
-    <td>Italia</td>
-    <td>{{ loc.immagine }}</td>
-  </tr>
-  <tr>
-    <td>Halifax</td>
-    <td>Canada</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Berlino</td>
-    <td>Germania</td>
-    <td></td>
-  </tr>
+    <th>Immagine</th>
+  </thead>
+  <tbody>
+    <tr *ngFor= "let loc of localita">
+      <td>{{ loc.paese }}</td>
+      <td>{{ loc.stato}}</td>
+      <td *ngIf="localitaSelezionata"></td>
+    </tr>
+  </tbody>
 </table>
