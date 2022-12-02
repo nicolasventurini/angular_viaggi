@@ -7,7 +7,7 @@ import { LocalitaComponent } from './viaggi/viaggi.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent],
+  declarations: [AppComponent, LocalitaComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
