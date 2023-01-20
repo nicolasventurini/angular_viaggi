@@ -8,10 +8,10 @@ import { ILocalita } from './localita';
 })
 export class LocalitaComponent {
   paese: string;
-  nazione: string;
+  stato: string;
   immagine: string;
   mostraImmagine: boolean = false;
-
+  listaFilter:string
 }
 
 localita: ILocalita[] = [
