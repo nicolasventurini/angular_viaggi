@@ -1,6 +1,6 @@
 <div>
   Inserisci filtro <input type="text" [(ngModel)]="listaFilter" />
-  <h4>Filtrato per {{ listaFileter }}</h4>
+  <h4>Filtrato per {{ listaFilter }}</h4>
 </div>
 
 <button (click)="mostraNascondiImg()">
@@ -18,9 +18,9 @@
   <tbody>
     <tr *ngFor="let loc of localita">
       <td>{{ loc.paese }}</td>
-      <td>{{ loc.stato }}</td>
-      <td *ngIf="localitaSelezionata">
-        <img *nfIf="mostraImmagine" [src]="loc.immagine" width="200px" />
+      <td>{{ loc.nazione }}</td>
+      <td *ngIf="mostraImmagine">
+        <img [src]="loc.immagine" width="200px" />
       </td>
     </tr>
   </tbody>

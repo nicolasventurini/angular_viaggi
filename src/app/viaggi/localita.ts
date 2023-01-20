@@ -1,5 +1,5 @@
 export interface ILocalita {
-  stato: string;
   paese: string;
+  nazione: string;
   immagine: string;
 }
