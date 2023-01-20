@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ILocalita } from './localita';
 
 @Component({
@@ -6,14 +6,24 @@ import { ILocalita } from './localita';
   templateUrl: './viaggi.component.html',
   styleUrls: ['./viaggi.component.css'],
 })
-export class LocalitaComponent {
+export class LocalitaComponent implements OnInit {
   paese: string;
   nazione: string;
   immagine: string;
   mostraImmagine: boolean = false;
   localitaSelezionata: ILocalita;
-  listaFilter: string = '';
+  //listaFilter: string = '';
   prezzo: number;
+  private _listaFilter: string = '';
+
+  get listaFilter(): string {
+    return this._listaFilter;
+  }
+
+  set listaFilter(value: string) {
+    this._listaFilter = value;
+    console.log(value);
+  }
 
   localita: ILocalita[] = [
     {
@@ -41,5 +51,8 @@ export class LocalitaComponent {
 
   mostraNascondiImg(): void {
     this.mostraImmagine = !this.mostraImmagine;
+  }
+  ngOnInit() {
+    console.log('lista creata');
   }
 }
