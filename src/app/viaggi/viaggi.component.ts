@@ -15,6 +15,8 @@ export class LocalitaComponent implements OnInit {
   //listaFilter: string = '';
   prezzo: number;
   private _listaFilter: string = '';
+  //array vuoto che conterrà le località filtrate
+  localitaFiltrate:ILocalita[]=[];
 
   get listaFilter(): string {
     return this._listaFilter;
@@ -54,5 +56,7 @@ export class LocalitaComponent implements OnInit {
   }
   ngOnInit() {
     console.log('lista creata');
+    this.listaFilter = '';
+    this.filterRegistrazione = this.datiFiltrati(value);
   }
 }
