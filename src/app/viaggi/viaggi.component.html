@@ -13,12 +13,14 @@
   <thead>
     <th>Paese</th>
     <th>Nazione</th>
+    <th>Prezzo coperto</th>
     <th>Immagine</th>
   </thead>
   <tbody>
     <tr *ngFor="let loc of localita">
       <td>{{ loc.paese }}</td>
       <td>{{ loc.nazione }}</td>
+      <td>{{ loc.prezzo | currency: 'EUR':'symbol' }}</td>
       <td *ngIf="mostraImmagine">
         <img [src]="loc.immagine" width="200px" />
       </td>
