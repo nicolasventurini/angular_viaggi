@@ -11,7 +11,7 @@ export class LocalitaComponent {
   nazione: string;
   immagine: string;
   mostraImmagine: boolean = false;
-  listaFilter:string
+  listaFilter:string = '';
 }
 
 localita: ILocalita[] = [
