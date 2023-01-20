@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ILocalita } from './localita';
-import { Localita } from './localita.component';
 
 @Component({
   selector: 'app-viaggi',
