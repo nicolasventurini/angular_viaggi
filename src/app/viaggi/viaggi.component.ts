@@ -59,4 +59,9 @@ export class LocalitaComponent implements OnInit {
     this.listaFilter = '';
     this.filterRegistrazione = this.datiFiltrati(value);
   }
+  datifiltrati(filtratoPer:string):ILocalita{
+    filtratoPer= filtratoPer.toLocaleLowerCase();
+
+    return this.localita.filter((loc:ILocalita)) => loc.nazione.toLocaleLowerCase().incluses(filtratoPer));
+  }
 }
