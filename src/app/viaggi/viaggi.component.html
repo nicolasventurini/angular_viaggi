@@ -21,6 +21,7 @@
       <td>{{ loc.paese }}</td>
       <td>{{ loc.nazione }}</td>
       <td>{{ loc.prezzo | currency: 'EUR':'symbol' }}</td>
+      <td><stella [valutazione]="loc.starRating"></stella></td>
       <td *ngIf="mostraImmagine">
         <img [src]="loc.immagine" width="200px" />
       </td>

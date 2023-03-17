@@ -3,4 +3,5 @@ export interface ILocalita {
   nazione: string;
   immagine: string;
   prezzo: number;
+  valutazione: number;
 }
